@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penguin Fashion with Tailwind</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              hero: "#FFFBF0",
+              card__img: "#F1F1F1",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="bg-hero">
+      <nav class="py-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <img src="./images/logo.png" alt="" class="nav__brand w-52" />
+          <div class="nav__links flex gap-6">
+            <div class="nav__item">
+              <a href="#" class="nav__link text-base">Home</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link text-base">Product</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link text-base">About Us</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link text-base">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Area -->
+      <section class="hero pb-12">
+        <div class="mx-auto container">
+          <div
+            class="
+              grid grid-cols-5
+              items-center
+              justify-items-center
+              gap-8
+              md:gap-4
+            "
+          >
+            <div
+              class="
+                hero__info
+                col-span-5
+                md:col-span-3
+                row-start-2
+                md:row-start-1
+                space-y-5
+              "
+            >
+              <h1 class="text-5xl uppercase font-bold">
+                <span class="text-yellow-500"> Be the Penguins </span>
+                <br />
+                of Winter
+              </h1>
+              <p class="text-base text-justify">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+                esse sint sed soluta pariatur impedit officia perspiciatis at
+                rerum porro.
+              </p>
+              <a
+                href="#"
+                class="
+                  hero__c2a
+                  py-3
+                  px-6
+                  rounded-md
+                  font-semibold
+                  uppercase
+                  bg-green-600
+                  text-white
+                  inline-block
+                "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 inline"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                Buy Now</a
+              >
+            </div>
+            <div
+              class="
+                hero__img-container
+                col-span-5
+                md:col-span-2
+                row-start-1
+                md:col-start-4
+              "
+            >
+              <img
+                src="./images/model.png"
+                alt=""
+                class="hero__img width-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Products Section -->
+      <section class="products mt-16">
+        <section class="woman-jackets">
+          <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-5">Woman Jacket</h2>
+
+            <div
+              class="
+                products
+                grid grid-cols-1
+                sm:grid-cols-2
+                md:grid-cols-3
+                gap-8
+                p-5
+                sm:p-0
+              "
+            >
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-1.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-2.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-3.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- man jackets -->
+
+        <section class="man-jackets">
+          <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-5 mt-14">Man Jacket</h2>
+
+            <div
+              class="
+                products
+                grid grid-cols-1
+                sm:grid-cols-2
+                md:grid-cols-3
+                gap-8
+                p-5
+                sm:p-0
+              "
+            >
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-4.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-5.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+              <div class="card p-4 rounded-lg shadow-lg">
+                <div class="card__img-container bg-card__img p-6 rounded-xl">
+                  <img src="./images/jacket-6.png" alt="" class="card__img" />
+                </div>
+                <div class="card__body space-y-2 my-6">
+                  <h3 class="text-3xl font-semibold">Yellow Coat Jacket</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque, sed.
+                  </p>
+                </div>
+                <div class="card__footer flex justify-between flex-wrap">
+                  <h4 class="card__price text-3xl font-bold text-yellow-500">
+                    $230
+                  </h4>
+
+                  <a
+                    href="#"
+                    class="
+                      hero__c2a
+                      py-3
+                      px-6
+                      rounded-md
+                      font-semibold
+                      uppercase
+                      bg-gradient-to-b
+                      from-[#A4BC46]
+                      to-[#85A019]
+                      text-white
+                      inline-block
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 inline"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer></footer>
+  </body>
+</html>
